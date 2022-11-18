@@ -1,0 +1,20 @@
+{
+  "name": "self_study_resolved_materials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://rit.accenture.com/gitlab/java_automation/self_study_resolved_materials.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "playwright": "^1.19.0"
+  }
+}
