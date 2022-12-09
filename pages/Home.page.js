@@ -5,8 +5,8 @@ class HomePage extends BasePage {
         super(page);
 
         // locators
-        this.careersButtonLocator; // define the xpath, css seletor or any other type of locator that locates the careersButtonLocator
-        this.searchAndApplyLinkTextLocator; // define the xpath, css seletor or any other type of locator that locates the searchAndApplyLinkTextLocator
+        this.careersButtonLocator = '(//button[text()="Careers"])[1]'; // define the xpath, css seletor or any other type of locator that locates the careersButtonLocator
+        this.searchAndApplyLinkTextLocator = '//a[text()="Search and Apply"]'; // define the xpath, css seletor or any other type of locator that locates the searchAndApplyLinkTextLocator
     }
 
     async navigate(){
@@ -15,6 +15,8 @@ class HomePage extends BasePage {
 
     async openSearchAndApply(){
         // Click on the 'Careers' button and then click on the 'Search and apply' link text that displays
+        await this.page.click(this.careersButtonLocator);
+        await this.page.click(this.searchAndApplyLinkTextLocator);
     }
 }
 
