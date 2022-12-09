@@ -13,8 +13,8 @@ let searchJobsPage = null;
 let jobDescriptionPage = null;
 
 beforeAll( async ()=>{
-    browser = await chromium.launch({ headless: false, slowMo: 1000 });
-    context = await browser.newContext();
+    browser = await chromium.launch({ args: ["--start-maximized"], headless: false, slowMo: 1000 });
+    context = await browser.newContext({viewport: null});
     page = await context.newPage();
     homePage = new HomePage(page);
     searchJobsPage = new SearchJobsPage(page);
